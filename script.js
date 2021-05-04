@@ -1,4 +1,4 @@
-const parentNames = ["jon"];
+const parentNames = ["jon", "alex"];
 const firstNameEndings = ["ien", "iel", "ion"];
 const secondNames = ["middle"];
 const thirdNames = ["third"];
@@ -11,4 +11,14 @@ function randomComponent(componentList) {
     return componentList[index];
 }
 
-console.log(randomComponent(firstNameEndings))
+function createFirstName() {
+    // Function that returns a randomly assembled First name from parent name array and first name endings
+    // Input: n/a
+    // Output: String
+    const pName = randomComponent(parentNames);
+    const ending = randomComponent(firstNameEndings);
+
+    return pName + ending;
+}
+
+console.log(createFirstName());
